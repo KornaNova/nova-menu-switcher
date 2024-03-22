@@ -1,6 +1,6 @@
 {
     "name": "wamesk/laravel-nova-menu-switcher",
-    "version": "dev-master",
+    "version": "1.0.0",
     "autoload": {
         "psr-4": {
             "Wame\\LaravelNovaMenuSwitcher\\": "src/"
