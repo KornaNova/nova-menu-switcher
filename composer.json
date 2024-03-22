@@ -1,0 +1,27 @@
+{
+    "name": "wamesk/laravel-nova-menu-switcher",
+    "version": "dev-master",
+    "autoload": {
+        "psr-4": {
+            "Wame\\LaravelNovaMenuSwitcher\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "adrianzofcin",
+            "email": "adrianzofcin@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "laravel/nova": "^4.0",
+        "norman-huth/nova-menu": "^1.7"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wame\\LaravelNovaMenuSwitcher\\LaravelNovaMenuSwitcherServiceProvider"
+            ]
+        }
+    }
+}
