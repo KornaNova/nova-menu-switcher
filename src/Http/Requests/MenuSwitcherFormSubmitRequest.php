@@ -12,13 +12,16 @@ class MenuSwitcherFormSubmitRequest extends FormRequest
         /** @var User $user */
         $user = auth()->user();
 
-        return $user->can_use_switcher;
+        $can_use_switcher = $user->can_use_switcher;
+
+        return $can_use_switcher ?? true;
     }
 
     public function rules(): array
     {
         return [
-            'menu-switcher' => 'required|string',
+            'switcher_value' => 'required|string',
+            'session_key' => 'required|string',
         ];
     }
 }

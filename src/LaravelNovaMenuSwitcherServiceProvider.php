@@ -4,7 +4,6 @@ namespace Wame\LaravelNovaMenuSwitcher;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Wame\Deduction\Http\Middleware\Authorize;
 
 class LaravelNovaMenuSwitcherServiceProvider extends ServiceProvider
 {
@@ -31,7 +30,7 @@ class LaravelNovaMenuSwitcherServiceProvider extends ServiceProvider
             return;
         }
 
-        Route::middleware(['nova', Authorize::class])
+        Route::middleware(['nova'])
             ->prefix('nova-vendor/menu-switcher')
             ->group(__DIR__ . '/../routes/api.php');
     }

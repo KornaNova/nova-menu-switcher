@@ -17,6 +17,7 @@ composer require wamesk/laravel-nova-menu-switcher
 ## Usage
 
 ```php
+// NovaServiceProvider.php
 Nova::mainMenu(function (Request $request) {
     return [
         ...
@@ -28,4 +29,14 @@ Nova::mainMenu(function (Request $request) {
         ...
     ];
 });
+```
+
+If you want to control who can use switcher you can add can_use_switcher attribute in user
+
+```php
+// User.php
+public function getCanUseSwitcherAttribute(): bool
+{
+    return $this->is_super_admin;
+}
 ```
