@@ -15,6 +15,7 @@ class Switcher
     ): MenuCard
     {
         return MenuCard::make()
+
             ->view('menu-switcher::switcher', [
                 'options' => $options,
                 'sessionKey' => $sessionKey,
